@@ -9,6 +9,7 @@ class TfliteCultureFloatingMarket extends StatefulWidget {
       : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _TfliteCultureFloatingMarketState createState() =>
       _TfliteCultureFloatingMarketState();
 }
@@ -44,7 +45,7 @@ class _TfliteCultureFloatingMarketState
               onPressed: () {
                 Navigator.of(context).pushReplacement(
                   MaterialPageRoute(
-                    builder: (context) => Kinh(),
+                    builder: (context) => const Kinh(),
                   ),
                 );
               },

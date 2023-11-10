@@ -26,7 +26,7 @@ class BardAiScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
             Expanded(
@@ -63,7 +63,7 @@ class BardAiScreen extends StatelessWidget {
                               child: Row(
                                 children: [
                                   Text(e.system == "user" ? "👨‍💻" : "🤖"),
-                                  SizedBox(width: 10),
+                                  const SizedBox(width: 10),
                                   Flexible(child: Text(e.message)),
                                 ],
                               ),
@@ -92,7 +92,7 @@ class BardAiScreen extends StatelessWidget {
                 ),
                 Obx(
                   () => controller.isLoading.value
-                      ? CircularProgressIndicator()
+                      ? const CircularProgressIndicator()
                       : IconButton(
                           onPressed: () {
                             if (textField.text != "") {
@@ -105,10 +105,10 @@ class BardAiScreen extends StatelessWidget {
                             color: Colors.white,
                           )),
                 ),
-                SizedBox(width: 10)
+                const SizedBox(width: 10)
               ]),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
           ],
         ),
       ),

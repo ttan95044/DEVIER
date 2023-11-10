@@ -14,6 +14,7 @@ class TfliteCultureFestival extends StatefulWidget {
       : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _TfliteCultureFestivalState createState() => _TfliteCultureFestivalState();
 }
 
@@ -42,6 +43,7 @@ class _TfliteCultureFestivalState extends State<TfliteCultureFestival> {
       model: "assets/model/mobilenet_festival/mobile_net_festival.tflite",
       labels: "assets/model/mobilenet_festival/labels_festival.txt",
     );
+    // ignore: avoid_print
     print("Models loaded successfully");
   }
 
@@ -65,31 +67,31 @@ class _TfliteCultureFestivalState extends State<TfliteCultureFestival> {
     if (label == "kinh") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Kinh(),
+          builder: (context) => const Kinh(),
         ),
       );
     } else if (label == "hoa") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Hoa(),
+          builder: (context) => const Hoa(),
         ),
       );
     } else if (label == "cham") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Cham(),
+          builder: (context) => const Cham(),
         ),
       );
     } else if (label == "khmer") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Khmer(),
+          builder: (context) => const Khmer(),
         ),
       );
     } else if (label == "khac") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Khac(),
+          builder: (context) => const Khac(),
         ),
       );
     }

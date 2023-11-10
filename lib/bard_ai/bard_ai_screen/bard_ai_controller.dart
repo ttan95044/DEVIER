@@ -36,14 +36,18 @@ class BardAIController extends GetxController {
           final bardReplay = data["candidates"][0]["output"];
           var newHistory2 = BardModel(system: "bard", message: bardReplay);
           historyList.add(newHistory2);
+          // ignore: avoid_print
           print(bardReplay.toString());
         } else {
+          // ignore: avoid_print
           print('Invalid response format');
         }
       } else {
+        // ignore: avoid_print
         print('Request failed with status: ${response.statusCode}');
       }
     } catch (error) {
+      // ignore: avoid_print
       print('Error: $error');
     }
 

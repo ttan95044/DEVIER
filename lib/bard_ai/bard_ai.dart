@@ -6,6 +6,6 @@ const BardAi({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context){
-    return BardAiScreen();
+    return const BardAiScreen();
   }
 }

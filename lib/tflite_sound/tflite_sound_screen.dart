@@ -28,6 +28,7 @@ class TfliteSoundScreen extends StatefulWidget {
   const TfliteSoundScreen({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _TfliteSoundScreenState createState() => _TfliteSoundScreenState();
 }
 
@@ -101,6 +102,7 @@ class _TfliteSoundScreenState extends State<TfliteSoundScreen> {
 
   Future setAudio() async {
     audioPlayer.setReleaseMode(ReleaseMode.LOOP);
+    // ignore: avoid_print
     print(audioFile);
 
     if (audioFile != null) {
@@ -125,8 +127,10 @@ class _TfliteSoundScreenState extends State<TfliteSoundScreen> {
     final response = await request.send();
     if (response.statusCode == 200) {
       final responseText = await response.stream.bytesToString();
+      // ignore: avoid_print
       print(responseText);
     } else {
+      // ignore: avoid_print
       print('Lỗi khi tải lên video: ${response.statusCode}');
     }
   }
@@ -134,6 +138,7 @@ class _TfliteSoundScreenState extends State<TfliteSoundScreen> {
   Future<void> getImage() async {
     const imageUrl =
         'http://192.168.1.3:5000/static/spectrogram_part_1.wav.png';
+    // ignore: avoid_print
     print(imageUrl);
     setState(() {
       convertedImage = Image.network(imageUrl);
@@ -146,11 +151,13 @@ class _TfliteSoundScreenState extends State<TfliteSoundScreen> {
 
     if (response.statusCode == 200) {
       final responseText = response.body;
+      // ignore: avoid_print
       print(responseText);
 
       if (responseText.isNotEmpty) {
         final jsonResponse = json.decode(responseText);
         final topLabel = jsonResponse['top_label'] as String;
+        // ignore: avoid_print
         print('Top Label: $topLabel');
 
         // Cập nhật predictions và thông báo cập nhật UI
@@ -159,6 +166,7 @@ class _TfliteSoundScreenState extends State<TfliteSoundScreen> {
         });
       }
     } else {
+      // ignore: avoid_print
       print('Lỗi khi lấy dự đoán: ${response.statusCode}');
     }
   }
@@ -262,31 +270,31 @@ class _TfliteSoundScreenState extends State<TfliteSoundScreen> {
                         case "kinh":
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Kinh()),
+                            MaterialPageRoute(builder: (context) => const Kinh()),
                           );
                           break;
                         case "cham":
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Cham()),
+                            MaterialPageRoute(builder: (context) => const Cham()),
                           );
                           break;
                         case "hoa":
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Hoa()),
+                            MaterialPageRoute(builder: (context) => const Hoa()),
                           );
                           break;
                         case "khmer":
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Khmer()),
+                            MaterialPageRoute(builder: (context) => const Khmer()),
                           );
                           break;
                         case "khac":
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Khac()),
+                            MaterialPageRoute(builder: (context) => const Khac()),
                           );
                           break;
                       }

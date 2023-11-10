@@ -12,6 +12,7 @@ class TfliteCultureTemple extends StatefulWidget {
   const TfliteCultureTemple({Key? key, required this.image}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _TfliteCultureTempleState createState() => _TfliteCultureTempleState();
 }
 
@@ -41,6 +42,7 @@ class _TfliteCultureTempleState extends State<TfliteCultureTemple> {
       model: "assets/model/mobilenet_dance/mobile_net_dance.tflite",
       labels: "assets/model/mobilenet_dance/labels_dance.txt",
     );
+    // ignore: avoid_print
     print("Models loaded successfully");
   }
 
@@ -64,25 +66,25 @@ class _TfliteCultureTempleState extends State<TfliteCultureTemple> {
     if (label == "khmer") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Khmer(),
+          builder: (context) => const Khmer(),
         ),
       );
     } else if (label == "hoa") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Hoa(),
+          builder: (context) => const Hoa(),
         ),
       );
     } else if (label == "cham") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Cham(),
+          builder: (context) => const Cham(),
         ),
       );
     } else if (label == "khac") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Khac(),
+          builder: (context) => const Khac(),
         ),
       );
     }

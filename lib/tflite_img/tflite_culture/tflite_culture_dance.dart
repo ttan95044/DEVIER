@@ -67,31 +67,31 @@ class _TfliteCultureDanceState extends State<TfliteCultureDance> {
     if (label == "kinh") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Kinh(),
+          builder: (context) => const Kinh(),
         ),
       );
     } else if (label == "hoa") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Hoa(),
+          builder: (context) => const Hoa(),
         ),
       );
     } else if (label == "cham") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Cham(),
+          builder: (context) => const Cham(),
         ),
       );
     } else if (label == "khmer") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Khmer(),
+          builder: (context) => const Khmer(),
         ),
       );
     } else if (label == "khac") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Khac(),
+          builder: (context) => const Khac(),
         ),
       );
     }

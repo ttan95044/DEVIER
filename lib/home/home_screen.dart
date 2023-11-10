@@ -3,6 +3,7 @@ import 'package:luanvanapp/home/home_content/home_content.dart';
 import 'package:luanvanapp/navbar/navbar.dart';
 
 class HomeScreen extends StatelessWidget {
+  // ignore: use_key_in_widget_constructors
   const HomeScreen({Key? key});
 
   @override

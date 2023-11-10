@@ -14,6 +14,7 @@ class TfliteCultureMarriage extends StatefulWidget {
       : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _TfliteCultureMarriageState createState() => _TfliteCultureMarriageState();
 }
 
@@ -43,6 +44,7 @@ class _TfliteCultureMarriageState extends State<TfliteCultureMarriage> {
       model: "assets/model/mobilenet_marriage/mobile_net_marriage.tflite",
       labels: "assets/model/mobilenet_marriage/labels_marriage.txt",
     );
+    // ignore: avoid_print
     print("Models loaded successfully");
   }
 
@@ -66,31 +68,31 @@ class _TfliteCultureMarriageState extends State<TfliteCultureMarriage> {
     if (label == "kinh") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Kinh(),
+          builder: (context) => const Kinh(),
         ),
       );
     } else if (label == "hoa") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Hoa(),
+          builder: (context) => const Hoa(),
         ),
       );
     } else if (label == "cham") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Cham(),
+          builder: (context) => const Cham(),
         ),
       );
     } else if (label == "khmer") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Khmer(),
+          builder: (context) => const Khmer(),
         ),
       );
     } else if (label == "khac") {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => Khac(),
+          builder: (context) => const Khac(),
         ),
       );
     }
