@@ -1,0 +1,60 @@
+name: luanvanapp
+description: A new Flutter project.
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.4 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  tflite: ^1.1.2
+  image_picker: ^1.0.4
+  http_parser: ^4.0.2
+  http: ^0.13.6
+  image: ^4.1.3
+  file_picker: ^5.1.6
+  path_provider: ^2.1.1
+  audioplayers: ^0.20.1
+  get: ^4.6.6
+  url_launcher: ^6.2.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
+    - assets/model/mobilenet_img/
+    - assets/model/mobilenet_dance/
+    - assets/model/mobilenet_festival/
+    - assets/model/mobilenet_marriage/
+    - assets/model/mobilenet_temple/
+
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Bold.ttf
+        - asset: assets/fonts/Montserrat-Regular.ttf
+    - family: GR
+      fonts:
+        - asset: assets/fonts/GreatVibes-Regular.ttf
+    - family: pv
+      fonts:
+        - asset: assets/fonts/pv.ttf
