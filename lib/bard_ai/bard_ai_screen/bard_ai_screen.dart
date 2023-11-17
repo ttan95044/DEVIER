@@ -14,7 +14,7 @@ class BardAiScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          "Công cụ BARD AI",
+          "AI Chatbot",
           style: TextStyle(fontWeight: FontWeight.bold, color: Color.fromARGB(255, 0, 119, 255)),
         ),
         backgroundColor: Colors.white,
@@ -43,7 +43,7 @@ class BardAiScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child:
-                          const Text("Hãy đặc câu hỏi cho tôi"),
+                          const Text("Please give me your questions!"),
                     ),
                   ],
                 ),
@@ -84,7 +84,7 @@ class BardAiScreen extends StatelessWidget {
                   child: TextFormField(
                     controller: textField,
                     decoration: const InputDecoration(
-                        hintText: "Ghi câu hỏi",
+                        hintText: "You: ",
                         border: OutlineInputBorder(
                           borderSide: BorderSide.none,
                         )),

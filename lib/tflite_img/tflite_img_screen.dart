@@ -121,11 +121,16 @@ class _TfliteImgScreenState extends State<TfliteImgScreen> {
         centerTitle: true,
         title: const Text(
           "Tìm kiếm bằng hình ảnh",
-          style: TextStyle(fontWeight: FontWeight.bold, color: Color.fromARGB(255, 0, 119, 255)),
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Color.fromARGB(255, 0, 119, 255)),
         ),
         backgroundColor: Colors.white,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back,color: Color.fromARGB(255, 0, 119, 255),),
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Color.fromARGB(255, 0, 119, 255),
+          ),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -146,11 +151,13 @@ class _TfliteImgScreenState extends State<TfliteImgScreen> {
               child: const Opacity(
                 opacity: 0.8,
                 child: Center(
-                  child: Text("Hãy chọn hình ảnh hoặc chụp"),
+                  child: Text("Hãy chọn hình ảnh hoặc chụp ảnh"),
                 ),
               ),
             ),
-          const SizedBox(height: 10,),
+          const SizedBox(
+            height: 10,
+          ),
           ListView.builder(
             shrinkWrap: true,
             itemCount: _results.length,

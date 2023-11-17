@@ -45,16 +45,16 @@ class HomeContent extends StatelessWidget {
                     Icon(
                       Icons.search,
                       color: Color.fromARGB(255, 0, 119, 255),
-                      size: 36,
+                      size: 26,
                     ),
                     SizedBox(
                       width: 10,
                     ),
                     Text(
-                      "Tìm kiếm bằng Google Bard",
+                      "Seeking more information (en)",
                       style: TextStyle(
                         color: Color.fromARGB(255, 0, 119, 255),
-                        fontSize: 23,
+                        fontSize: 22,
                         fontWeight: FontWeight.w600,
                         fontFamily: 'pv',
                       ),
