@@ -119,7 +119,7 @@ class _TfliteSoundScreenState extends State<TfliteSoundScreen> {
   }
 
   Future<void> uploadAudio(File audioFile) async {
-    final url = Uri.parse('http://192.168.1.3:5000/process_audio');
+    final url = Uri.parse('http://192.168.1.4:5000/process_audio');
     final request = http.MultipartRequest('POST', url);
     request.files
         .add(await http.MultipartFile.fromPath('audio', audioFile.path));
@@ -137,7 +137,7 @@ class _TfliteSoundScreenState extends State<TfliteSoundScreen> {
 
   Future<void> getImage() async {
     const imageUrl =
-        'http://192.168.1.3:5000/static/spectrogram_part_1.wav.png';
+        'http://192.168.1.4:5000/static/spectrogram_part_1.wav.png';
     // ignore: avoid_print
     print(imageUrl);
     setState(() {
@@ -146,7 +146,7 @@ class _TfliteSoundScreenState extends State<TfliteSoundScreen> {
   }
 
   Future<void> fetchPredictions() async {
-    final url = Uri.parse('http://192.168.1.3:5000/get_prediction');
+    final url = Uri.parse('http://192.168.1.4:5000/get_prediction');
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
@@ -300,7 +300,7 @@ class _TfliteSoundScreenState extends State<TfliteSoundScreen> {
                       }
                     }
                   },
-                  child: const Text('Xem dân tộc đã dữ đoán'),
+                  child: const Text('Xem dân tộc đã dự đoán'),
                 )
               ],
             ),
