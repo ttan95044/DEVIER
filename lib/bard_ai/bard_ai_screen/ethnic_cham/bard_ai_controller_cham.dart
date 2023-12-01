@@ -1,17 +1,17 @@
 import 'dart:convert';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:luanvanapp/bard_ai/bard_ai_screen/bard_model.dart';
+import 'package:luanvanapp/bard_ai/bard_ai_screen/ethnic_hoa/bard_model_hoa.dart';
 import 'package:luanvanapp/bard_ai/bard_ai_screen/data.dart';
 
-class BardAIController extends GetxController {
-  RxList historyList = RxList<BardModel>();
+class BardAIControllerCham extends GetxController {
+  RxList historyList = RxList<BardModelHoa>();
 
   RxBool isLoading = false.obs;
 
   void sendPrompt(String prompt) async {
     isLoading.value = true;
-    var newHistory = BardModel(system: "user", message: prompt);
+    var newHistory = BardModelHoa(system: "user", message: prompt);
     historyList.add(newHistory);
     try {
       final body = {
@@ -34,7 +34,7 @@ class BardAIController extends GetxController {
         final data = jsonDecode(response.body);
         if (data.containsKey("candidates") && data["candidates"].isNotEmpty) {
           final bardReplay = data["candidates"][0]["output"];
-          var newHistory2 = BardModel(system: "bard", message: bardReplay);
+          var newHistory2 = BardModelHoa(system: "bard", message: bardReplay);
           historyList.add(newHistory2);
           // ignore: avoid_print
           print(bardReplay.toString());

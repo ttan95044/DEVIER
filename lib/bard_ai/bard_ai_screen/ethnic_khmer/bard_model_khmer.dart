@@ -1,10 +1,10 @@
-class BardModel {
+class BardModelKhmer {
   String? system;
   String? message;
 
-  BardModel({this.system, this.message});
+  BardModelKhmer({this.system, this.message});
 
-  BardModel.fromJson(Map<String, dynamic> json) {
+  BardModelKhmer.fromJson(Map<String, dynamic> json) {
     if(json["system"] is String) {
       system = json["system"];
     }

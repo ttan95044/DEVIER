@@ -1,32 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:luanvanapp/bard_ai/bard_ai_screen/bard_ai_controller.dart';
+import 'package:luanvanapp/bard_ai/bard_ai_screen/ethnic_khmer/bard_ai_controller_khmer.dart';
 
-class BardAiScreen extends StatelessWidget {
-  const BardAiScreen({Key? key}) : super(key: key);
+class AiEthnicKhmer extends StatelessWidget {
+const AiEthnicKhmer({ Key? key }) : super(key: key);
 
-  @override
+@override
   Widget build(BuildContext context) {
-    BardAIController controller = Get.put(BardAIController());
+    BardAIControllerKhmer controller = Get.put(BardAIControllerKhmer());
 
     TextEditingController textField = TextEditingController();
 
     List<String> permissionWord = [
-      'hoa',
       'khmer',
-      'kinh',
-      'viet',
-      'vietnam',
-      'champa',
-      'cham',
-      'ethnic',
+      'kho-me',
+      'chol chnăm thmay',
+      'chôl chnăm thmây',
+      'ok om bok',
+      'sene dolta',
+      'ooc oom bok',
+      'sene boht',
+      'mon an',
+      'dam cuoi',
+      'marriage',
+      'truyen thong',
+      'traditional',
+      'culture',
+      'dish',
     ];
 
     void showMaterialBanner(BuildContext context) {
       ScaffoldMessenger.of(context).showMaterialBanner(
         MaterialBanner(
           content: const Text(
-              'System supports for Vietnamese ethnic groups. \nPlease ask your questions related to ethnic group in Vietnam'),
+              'System supports for Khmer ethnic groups. \nPlease ask your questions related to ethnic group'),
           backgroundColor: Colors.yellow,
           actions: [
             TextButton(
@@ -77,7 +84,7 @@ class BardAiScreen extends StatelessWidget {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: const Text("Please give me your questions!"),
+                        child: const Text("Please give me your questions \nabout Khmer ethnic group!"),
                       ),
                     ],
                   ),
